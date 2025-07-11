@@ -1,6 +1,6 @@
 {
     "name": "@bjesuiter/deno-tailwindcss-iso",
-    "version": "1.0.5",
+    "version": "1.0.5-poc.1",
     "exports": {
         ".": "./dist/browser.js",
         "./browser": "./dist/browser.js"
