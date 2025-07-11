@@ -1,0 +1,17 @@
+{
+    "name": "@bjesuiter/deno-tailwindcss-iso",
+    "version": "1.0.5",
+    "exports": {
+        ".": "./dist/browser.js",
+        "./browser": "./dist/browser.js"
+    },
+    "include": [
+        "dist/*",
+        "jsr.json"
+    ],
+    "exclude": [
+        ".",
+        "!dist"
+    ],
+    "license": "MIT"
+}
