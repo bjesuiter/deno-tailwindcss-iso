@@ -19,13 +19,7 @@ export default defineConfig({
     
     // Configure different environments for different test patterns
     workspace: [
-      // Server tests
-      {
-        test: {
-          include: ['test/server/**/*.test.js'],
-          environment: 'node',
-        }
-      },
+     
       // Browser tests  
       {
         test: {

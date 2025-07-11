@@ -10,7 +10,7 @@
   "cdn": "./dist/browser.js",
   "unpkg": "./dist/browser.js",
   "jsdelivr": "./dist/browser.js",
-  "main": "src/server/index.js",
+  "main": "src/browser/index.js",
   "module": "src/browser/index.js",
   "types": "types/index.d.ts",
   "exports": {
@@ -21,23 +21,17 @@
       "jsdelivr": "./dist/browser.js",
       "importmap": "./dist/browser.js",
       "browser": "./src/browser/index.js",
-      "node": "./src/server/index.js",
-      "default": "./src/server/index.js"
+      "default": "./src/browser/index.js"
     },
     "./browser": {
       "types": "./types/index.d.ts",
       "default": "./src/browser/index.js"
-    },
-    "./server": {
-      "types": "./types/index.d.ts",
-      "default": "./src/server/index.js"
     }
   },
   "scripts": {
     "build": "tsup",
     "prepublishOnly": "npm run build",
     "test": "vitest --config test/configs/vitest.all.config.js",
-    "test:server": "vitest --config test/configs/vitest.config.js",
     "test:browser": "vitest --config test/configs/vitest.browser.config.js"
   },
   "files": [
@@ -48,10 +42,6 @@
   ],
   "peerDependencies": {
     "tailwindcss": "^3.0.0 || ^4.0.0"
-  },
-  "optionalDependencies": {
-    "@tailwindcss/node": "^4.1.9",
-    "@tailwindcss/oxide": "^4.1.9"
   },
   "devDependencies": {
     "@vitest/browser": "^3.0.8",
