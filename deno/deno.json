@@ -11,7 +11,7 @@
         "tailwindcss": "npm:tailwindcss@^3.0.0 || ^4.0.0"
     },
     "tasks": {
-        "test:deno": "deno test test/deno",
+        "test": "deno test ./test",
         "jsr-dry": "deno publish --dry-run --allow-dirty",
         "jsr": "deno publish --allow-dirty"
     },
