@@ -33,6 +33,7 @@
     "prepublishOnly": "npm run build",
     "test": "vitest --config test/configs/vitest.all.config.js",
     "test:browser": "vitest --config test/configs/vitest.browser.config.js",
+    "test:deno": "deno test test/deno",
     "jsr-dry": "bunx jsr publish --dry-run --allow-dirty",
     "jsr": "bunx jsr publish --allow-dirty"
   },
