@@ -4,25 +4,20 @@
     "description": "A plugin for generating tailwind css and extracting classes uniformly in deno",
     "license": "MIT",
     "exports": {
-        ".": "./dist/browser.js",
-        "./browser": "./dist/browser.js"
+        ".": "./src/index.js"
     },
     "imports": {
-        "wbg:": "./src/deno/oxide/tailwindcss_oxide_js",
+        "wbg:": "./src/deno/oxide/tailwindcss_oxide.js",
         "tailwindcss": "npm:tailwindcss@^3.0.0 || ^4.0.0"
     },
     "tasks": {
-        "build": "tsup",
-        "test": "vitest --config test/configs/vitest.all.config.js",
-        "test:browser": "vitest --config test/configs/vitest.browser.config.js",
         "test:deno": "deno test test/deno",
-        "jsr-dry": "bunx jsr publish --dry-run --allow-dirty",
-        "jsr": "bunx jsr publish --allow-dirty"
+        "jsr-dry": "deno publish --dry-run --allow-dirty",
+        "jsr": "deno publish --allow-dirty"
     },
     "publish": {
         "include": [
-            "dist/*",
-            "jsr.json",
+            "src/*",
             "LICENSE"
         ],
         "exclude": [

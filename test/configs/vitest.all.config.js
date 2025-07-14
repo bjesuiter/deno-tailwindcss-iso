@@ -4,6 +4,7 @@ export default defineConfig({
   test: {
     // Run both server and browser tests
     include: ['test/**/*.test.js'],
+    exclude: ['deno'],
     environment: 'node', // Default environment for server tests
     
     // Browser configuration for browser-specific tests
@@ -24,6 +25,7 @@ export default defineConfig({
       {
         test: {
           include: ['test/browser/**/*.test.js'],
+          exclude: ['deno'],
           browser: {
             enabled: true,
             provider: 'playwright',
