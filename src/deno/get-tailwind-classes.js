@@ -29,6 +29,10 @@ export async function getTailwindClasses({
     // await wasmModule.default({
     //   module_or_path: new URL(wasmAsset.replace('?url', ''), import.meta.url)
     // });
+    await wasmModule.default({
+      // new URL('tailwindcss_oxide_bg.wasm', import.meta.url)
+      module_or_path: new URL("./oxide/tailwindcss_oxide.js", import.meta.url)
+    });
     Scanner = wasmModule.WasmScanner;
     ChangedContent = wasmModule.WasmChangedContent;
   }

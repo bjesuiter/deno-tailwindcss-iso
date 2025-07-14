@@ -1,0 +1,37 @@
+{
+    "name": "@bjesuiter/deno-tailwindcss-iso",
+    "version": "1.0.5-poc.1",
+    "description": "A plugin for generating tailwind css and extracting classes uniformly in deno",
+    "license": "MIT",
+    "exports": {
+        ".": "./dist/browser.js",
+        "./browser": "./dist/browser.js"
+    },
+    "imports": {
+        "wbg:": "./src/deno/oxide/tailwindcss_oxide_js",
+        "tailwindcss": "npm:tailwindcss@^3.0.0 || ^4.0.0"
+    },
+    "tasks": {
+        "build": "tsup",
+        "test": "vitest --config test/configs/vitest.all.config.js",
+        "test:browser": "vitest --config test/configs/vitest.browser.config.js",
+        "test:deno": "deno test test/deno",
+        "jsr-dry": "bunx jsr publish --dry-run --allow-dirty",
+        "jsr": "bunx jsr publish --allow-dirty"
+    },
+    "publish": {
+        "include": [
+            "dist/*",
+            "jsr.json",
+            "LICENSE"
+        ],
+        "exclude": [
+            ".",
+            "!dist"
+        ]
+    },
+    "exclude": [
+        "node_modules/",
+        "dist/"
+    ]
+}
