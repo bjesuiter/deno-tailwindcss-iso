@@ -7,8 +7,14 @@
         ".": "./src/index.js"
     },
     "imports": {
-        "wbg:": "./src/deno/oxide/tailwindcss_oxide.js",
-        "tailwindcss": "npm:tailwindcss@^3.0.0 || ^4.0.0"
+        "tailwindcss": "npm:tailwindcss@^3.0.0 || ^4.0.0",
+        "wbg:": "./src/oxide/tailwindcss_oxide.js"
+    },
+    "compilerOptions": {
+        "allowJs": true,
+        "lib": [
+            "deno.window"
+        ]
     },
     "tasks": {
         "test": "deno test ./test",
@@ -28,5 +34,6 @@
     "exclude": [
         "node_modules/",
         "dist/"
-    ]
+    ],
+    "nodeModulesDir": "none"
 }

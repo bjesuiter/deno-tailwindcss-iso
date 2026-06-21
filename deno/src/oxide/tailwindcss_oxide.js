@@ -395,7 +395,8 @@ async function __wbg_init(module_or_path) {
   }
 
   if (typeof module_or_path === 'undefined') {
-    module_or_path = new URL('tailwindcss_oxide_bg.wasm', import.meta.url);
+    // Use import map for Deno compatibility
+    module_or_path = new URL('./src/oxide/tailwindcss_oxide_bg.wasm', import.meta.url);
   }
   const imports = __wbg_get_imports();
 
